@@ -23,12 +23,6 @@ def audio_callback(indata, frames, time, status):
         print(status)
     q.put(indata.copy())
 
-def split_track(data, track): 
-    print('splitting')
-    data.append(track)
-    track = []
-    print('Split track_' + str(len(data)))
-    
 def recordstream():
     try:
         data = []
